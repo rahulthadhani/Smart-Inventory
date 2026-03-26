@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/loginFragment">
+
+    <!-- Login Screen -->
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.smartinventory.ui.auth.LoginFragment"
+        android:label="Login"
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/action_login_to_dashboard"
+            app:destination="@id/dashboardFragment"
+            app:popUpTo="@id/loginFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_login_to_register"
+            app:destination="@id/registerFragment" />
+    </fragment>
+
+    <!-- Register Screen -->
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.example.smartinventory.ui.auth.RegisterFragment"
+        android:label="Register"
+        tools:layout="@layout/fragment_register">
+        <action
+            android:id="@+id/action_register_to_login"
+            app:destination="@id/loginFragment"
+            app:popUpTo="@id/loginFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <!-- Dashboard Screen -->
+    <fragment
+        android:id="@+id/dashboardFragment"
+        android:name="com.example.smartinventory.ui.dashboard.DashboardFragment"
+        android:label="Dashboard"
+        tools:layout="@layout/fragment_dashboard">
+        <action
+            android:id="@+id/action_dashboard_to_itemList"
+            app:destination="@id/itemListFragment" />
+        <action
+            android:id="@+id/action_dashboard_to_addItem"
+            app:destination="@id/addEditItemFragment" />
+        <action
+            android:id="@+id/action_dashboard_to_login"
+            app:destination="@id/loginFragment"
+            app:popUpTo="@id/dashboardFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <!-- Item List Screen -->
+    <fragment
+        android:id="@+id/itemListFragment"
+        android:name="com.example.smartinventory.ui.items.ItemListFragment"
+        android:label="Inventory"
+        tools:layout="@layout/fragment_item_list">
+        <action
+            android:id="@+id/action_itemList_to_addEditItem"
+            app:destination="@id/addEditItemFragment" />
+    </fragment>
+
+    <!-- Add / Edit Item Screen -->
+    <fragment
+        android:id="@+id/addEditItemFragment"
+        android:name="com.example.smartinventory.ui.items.AddEditItemFragment"
+        android:label="Add / Edit Item"
+        tools:layout="@layout/fragment_add_edit_item">
+        <argument
+            android:name="itemId"
+            app:argType="integer"
+            android:defaultValue="-1" />
+    </fragment>
+
+</navigation>

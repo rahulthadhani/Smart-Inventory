@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/dashboardFragment"
+            android:icon="@android:drawable/ic_menu_compass"
+            android:title="Dashboard"/>
+
+        <item
+            android:id="@+id/itemListFragment"
+            android:icon="@android:drawable/ic_menu_agenda"
+            android:title="Inventory"/>
+
+        <item
+            android:id="@+id/addEditItemFragment"
+            android:icon="@android:drawable/ic_menu_add"
+            android:title="Add Item"/>
+
+    </group>
+
+    <item
+        android:id="@+id/action_logout"
+        android:icon="@android:drawable/ic_menu_close_clear_cancel"
+        android:title="Logout"/>
+
+</menu>

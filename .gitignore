@@ -1,0 +1,23 @@
+# Built application files
+*.apk
+*.aab
+*.ap_
+
+# Build directories
+build/
+.gradle/
+
+# Local configuration
+local.properties
+*.iml
+
+# Android Studio
+.idea/
+*.DS_Store
+
+# Keystore files
+*.jks
+*.keystore
+
+# Google services
+google-services.json
